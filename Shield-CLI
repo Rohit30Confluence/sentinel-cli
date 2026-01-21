@@ -1,0 +1,12 @@
+shield-cli/
+├── core/                # The Go-based System Engine
+│   ├── cmd/             # CLI Entry points (e.g., 'shield monitor')
+│   ├── pkg/             # Low-level system libraries (Log parsers, Syscalls)
+│   └── main.go
+├── agents/              # The Python-based AI Brain
+│   ├── brain.py         # The reasoning loop (Agentic AI)
+│   ├── analyzers/       # Domain-specific logic (Attack detection, Log analysis)
+│   └── requirements.txt
+├── scripts/             # Setup and deployment scripts
+├── .env.example         # API keys for AI and system paths
+└── README.md
