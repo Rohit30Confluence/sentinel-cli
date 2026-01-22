@@ -1,0 +1,11 @@
+# Core runtime
+python-dateutil>=2.8.2
+
+# YAML policy loading
+PyYAML>=6.0
+
+# Optional (future use)
+# Uncomment only when LLM reasoning is wired in
+# langchain>=0.1.0
+# langgraph>=0.0.30
+# openai>=1.0.0
