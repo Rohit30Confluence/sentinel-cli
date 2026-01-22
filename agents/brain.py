@@ -2,6 +2,8 @@ import sys
 import json
 from collections import deque
 from datetime import datetime, timedelta
+from analyzers.bruteforce import BruteForceAnalyzer
+
 
 # ---- Agent Configuration ----
 WINDOW_SECONDS = 60
@@ -15,9 +17,11 @@ class SentinelAgent:
     """
 
     def __init__(self):
+        self.bruteforce = BruteForceAnalyzer()
         self.event_window = deque()
         self.start_time = datetime.utcnow()
         self._announce()
+        
 
     def _announce(self):
         print("Sentinel Agent :: Intelligence Plane online", flush=True)
@@ -89,6 +93,7 @@ class SentinelAgent:
                 continue
 
             decision = self.analyze(event)
+            if decision:
             self.emit(event, decision)
 
             # Future hook: Action Plane
